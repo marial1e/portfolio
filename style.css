@@ -523,44 +523,6 @@ section {
 
 /* ---------- 關於 ---------- */
 
-.materials {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.material {
-  display: block;
-  overflow: hidden;
-  border-radius: 18px;
-  background: var(--sheet);
-  color: inherit;
-  text-decoration: none;
-  box-shadow: 0 6px 18px var(--shadow);
-  transition: transform 0.2s ease;
-}
-
-.material:hover {
-  transform: translateY(-4px);
-}
-
-.material img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-}
-
-.material h3 {
-  padding: 10px 14px 0;
-}
-
-.material p {
-  margin: 0;
-  padding: 0 14px 12px;
-  color: var(--muted);
-  font-size: 0.88rem;
-}
-
 .contact-list {
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -643,10 +605,6 @@ section {
     scroll-snap-align: start;
   }
 
-  .materials {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .scrubber {
     padding: 14px;
   }
@@ -664,7 +622,6 @@ section {
 
   .stage .layer,
   .work-card,
-  .material,
   .button {
     transition: none;
   }
