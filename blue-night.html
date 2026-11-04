@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>《藍夜》｜香香軟軟屍體</title>
+    <meta name="description" content="曾怡柔的定格動畫《藍夜》，可以看完整影片，也可以一格一格看。" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Chiron+Sung+HK:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script>try { if (localStorage.getItem("theme") === "night") document.documentElement.dataset.theme = "night"; } catch (e) {}</script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a class="logo" href="index.html">PORTFOLIO｜作品集</a>
+        <nav class="site-nav" aria-label="主要導覽">
+          <a href="works.html">作品</a>
+          <a href="blue-night.html" aria-current="page">藍夜</a>
+          <a href="about.html">關於</a>
+          <button class="theme-toggle" type="button" data-theme-toggle>關燈</button>
+        </nav>
+      </header>
+
+      <main>
+        <div class="page-head">
+          <span class="en-sub">VIDEO</span>
+          <h1>《藍夜》</h1>
+          <p class="lede">定格動畫。好累喔 但很好玩。</p>
+        </div>
+
+        <section aria-label="影片">
+          <video class="film" id="film" src="video/blue-night.mp4" poster="images/still-clouds.webp" width="1920" height="1080" controls preload="metadata" playsinline>
+            您的瀏覽器不支援 HTML5 影片播放。
+          </video>
+
+          <div class="chapters" aria-label="影片段落">
+            <button class="chapter" type="button" data-time="5">
+              <img src="images/still-clouds.webp" width="960" height="540" alt="" loading="lazy" />
+              <span><small>0:05</small>雲</span>
+            </button>
+            <button class="chapter" type="button" data-time="25">
+              <img src="images/still-stars.webp" width="960" height="540" alt="" loading="lazy" />
+              <span><small>0:25</small>星星</span>
+            </button>
+            <button class="chapter" type="button" data-time="48">
+              <img src="images/still-folds.webp" width="960" height="540" alt="" loading="lazy" />
+              <span><small>0:48</small>摺線</span>
+            </button>
+            <button class="chapter" type="button" data-time="82">
+              <img src="images/still-tear.webp" width="960" height="540" alt="" loading="lazy" />
+              <span><small>1:22</small>撕開</span>
+            </button>
+            <button class="chapter" type="button" data-time="96">
+              <img src="images/still-fish.webp" width="960" height="540" alt="" loading="lazy" />
+              <span><small>1:36</small>魚</span>
+            </button>
+          </div>
+        </section>
+
+        <section aria-labelledby="frames-heading">
+          <div class="section-head">
+            <div>
+              <span class="en-sub">FRAME BY FRAME</span>
+              <h2 id="frames-heading">一格一格看</h2>
+              <p class="lede">定格動畫本來就是一張一張拍出來的。從片子裡抽了 72 格，拉一下就可以慢慢翻。</p>
+            </div>
+          </div>
+          <div class="scrubber">
+            <img id="frame-image" src="images/frames/001.webp" width="960" height="540" alt="《藍夜》第 1 格" />
+            <input id="frame-slider" type="range" min="1" max="72" value="1" step="1" aria-label="選擇第幾格" />
+            <div class="scrubber-controls">
+              <button class="button quiet" type="button" id="frame-prev" aria-label="上一格">←</button>
+              <button class="button quiet" type="button" id="frame-play">播放</button>
+              <button class="button quiet" type="button" id="frame-next" aria-label="下一格">→</button>
+              <span class="frame-count" id="frame-count" aria-live="off">001 / 072</span>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="set-heading">
+          <div class="set-photo">
+            <img src="images/clouds.webp" width="1800" height="1012" alt="層層白紙剪成的雲，中間露出兩個黃頭藍身的小人" loading="lazy" />
+            <div>
+              <span class="en-sub">SET</span>
+              <h2 id="set-heading">場景本人</h2>
+              <p class="lede">白紙剪成一層一層的雲，靠打光和影子把深度撐出來。</p>
+              <a class="button quiet" href="work.html?id=clouds">看這件作品 ➔</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 曾怡柔</p>
+        <button class="button quiet" type="button" data-to-top>回到頂部 ↑</button>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

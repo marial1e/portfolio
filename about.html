@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>關於我｜香香軟軟屍體</title>
+    <meta name="description" content="曾怡柔，就讀實踐大學媒體傳達設計學系。" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Chiron+Sung+HK:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script>try { if (localStorage.getItem("theme") === "night") document.documentElement.dataset.theme = "night"; } catch (e) {}</script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a class="logo" href="index.html">PORTFOLIO｜作品集</a>
+        <nav class="site-nav" aria-label="主要導覽">
+          <a href="works.html">作品</a>
+          <a href="blue-night.html">藍夜</a>
+          <a href="about.html" aria-current="page">關於</a>
+          <button class="theme-toggle" type="button" data-theme-toggle>關燈</button>
+        </nav>
+      </header>
+
+      <main>
+        <div class="page-head">
+          <span class="en-sub">STATEMENT</span>
+          <h1>關於我</h1>
+          <p class="lede">
+            我是曾怡柔，目前就讀實踐大學媒體傳達設計學系。<br />
+            這是我的作品集網站。
+          </p>
+        </div>
+
+        <section aria-labelledby="materials-heading">
+          <div class="section-head">
+            <div>
+              <span class="en-sub">MATERIALS</span>
+              <h2 id="materials-heading">手邊的材料</h2>
+            </div>
+          </div>
+          <div class="materials">
+            <a class="material" href="blue-night.html">
+              <img src="images/still-clouds.webp" width="960" height="540" alt="" loading="lazy" />
+              <h3>紙</h3>
+              <p>《藍夜》</p>
+            </a>
+            <a class="material" href="work.html?id=leaf">
+              <img src="images/leaf.webp" width="1000" height="2028" alt="" loading="lazy" />
+              <h3>落葉與線</h3>
+              <p>落葉懸吊</p>
+            </a>
+            <a class="material" href="work.html?id=pipe">
+              <img src="images/pipe.webp" width="1000" height="1778" alt="" loading="lazy" />
+              <h3>炭筆</h3>
+              <p>接頭</p>
+            </a>
+            <a class="material" href="work.html?id=arcade">
+              <img src="images/arcade.webp" width="820" height="1728" alt="" loading="lazy" />
+              <h3>顏料</h3>
+              <p>彩繪機台</p>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 曾怡柔</p>
+        <button class="button quiet" type="button" data-to-top>回到頂部 ↑</button>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

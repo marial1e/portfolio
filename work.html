@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>作品｜香香軟軟屍體</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Chiron+Sung+HK:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script>try { if (localStorage.getItem("theme") === "night") document.documentElement.dataset.theme = "night"; } catch (e) {}</script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a class="logo" href="index.html">PORTFOLIO｜作品集</a>
+        <nav class="site-nav" aria-label="主要導覽">
+          <a href="works.html" aria-current="page">作品</a>
+          <a href="blue-night.html">藍夜</a>
+          <a href="about.html">關於</a>
+          <button class="theme-toggle" type="button" data-theme-toggle>關燈</button>
+        </nav>
+      </header>
+
+      <main>
+        <!-- 內容由 script.js 依網址的 ?id= 從 works-data.js 帶入 -->
+        <article class="work-detail" id="work-detail"></article>
+        <nav class="pager" id="work-pager" aria-label="上一件與下一件作品"></nav>
+        <p style="margin-top: 28px"><a href="works.html">← 回到作品列表</a></p>
+        <noscript><p>這一頁需要開啟 JavaScript 才能顯示作品。</p></noscript>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 曾怡柔</p>
+        <button class="button quiet" type="button" data-to-top>回到頂部 ↑</button>
+      </footer>
+    </div>
+
+    <script src="works-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

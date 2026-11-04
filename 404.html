@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>找不到頁面｜香香軟軟屍體</title>
+    <!-- 404 可能出現在任何網址底下，用 base 讓路徑都從網站根目錄算起 -->
+    <base href="/portfolio/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Chiron+Sung+HK:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script>try { if (localStorage.getItem("theme") === "night") document.documentElement.dataset.theme = "night"; } catch (e) {}</script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a class="logo" href="index.html">PORTFOLIO｜作品集</a>
+        <nav class="site-nav" aria-label="主要導覽">
+          <a href="works.html">作品</a>
+          <a href="blue-night.html">藍夜</a>
+          <a href="about.html">關於</a>
+          <button class="theme-toggle" type="button" data-theme-toggle>關燈</button>
+        </nav>
+      </header>
+
+      <main class="not-found">
+        <span class="en-sub">404</span>
+        <h1>這頁死掉了</h1>
+        <p class="muted">會死嗎 不知道。這頁是真的死了。</p>
+        <a class="button" href="index.html">回首頁 ➔</a>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 曾怡柔</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

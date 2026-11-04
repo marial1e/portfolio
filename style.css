@@ -1,0 +1,649 @@
+/* ==========================================================
+   香香軟軟屍體｜曾怡柔作品集
+   所有頁面共用這一份樣式。要改配色，只要改下面的變數。
+   ========================================================== */
+
+:root {
+  --paper: #eff2f1; /* 頁面底色 */
+  --sheet: #ffffff; /* 卡片、白紙 */
+  --sheet-2: #dfe2ec; /* 後層的紙 */
+  --hole: #b9bbcc; /* 紙雕鏤空處 */
+  --shade: #77768a; /* 最深的一層紙 */
+  --ink: #4059ad; /* 主色：藍 */
+  --accent: #f4b942; /* 點綴：黃 */
+  --on-accent: #26315f; /* 黃底上的字 */
+  --figure: #3f9fd3; /* 小人身體 */
+  --text: #3f465c;
+  --muted: #666d82;
+  --line: #d6dae2;
+  --shadow: rgba(30, 40, 80, 0.14);
+  --radius: 22px;
+  --font-body: "Cactus Classical Serif", "Noto Serif TC", "Microsoft JhengHei", serif;
+  --font-display: "Chiron Sung HK", "Noto Serif TC", "Microsoft JhengHei", serif;
+}
+
+/* 藍夜模式：把頁面關燈 */
+:root[data-theme="night"] {
+  --paper: #131b3a;
+  --sheet: #1c2650;
+  --sheet-2: #26326a;
+  --hole: #0f1630;
+  --shade: #0a0f24;
+  --ink: #f4b942;
+  --accent: #f4b942;
+  --on-accent: #1b2448;
+  --figure: #4fb2e6;
+  --text: #dce1f0;
+  --muted: #a7afcb;
+  --line: #303c72;
+  --shadow: rgba(0, 0, 0, 0.42);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.85;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- 文字 ---------- */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  letter-spacing: 0.06em;
+  line-height: 1.35;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.4vw, 2rem);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.en-sub {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 0 8px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-family: Arial, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.lede {
+  max-width: 34em;
+  margin-top: 14px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ---------- 頁首 ---------- */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 36px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+}
+
+.site-nav a {
+  padding: 2px 0;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
+.theme-toggle {
+  padding: 2px 14px;
+  border: 1px solid var(--line);
+  border-radius: 50px;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+/* ---------- 按鈕 ---------- */
+
+.button {
+  display: inline-block;
+  padding: 11px 32px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--ink);
+  color: var(--paper);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  background-color: var(--accent);
+  color: var(--on-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px var(--shadow);
+}
+
+.button.quiet {
+  padding: 8px 22px;
+  background: none;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1.5px var(--ink);
+  font-size: 0.9rem;
+}
+
+.button.quiet:hover {
+  background-color: var(--accent);
+  color: var(--on-accent);
+  box-shadow: inset 0 0 0 1.5px var(--accent), 0 8px 18px var(--shadow);
+}
+
+/* ---------- 首頁：紙雕主視覺 ---------- */
+
+.stage {
+  position: relative;
+  height: clamp(250px, 52vh, 520px);
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--hole);
+  box-shadow: 0 16px 36px var(--shadow);
+}
+
+.stage svg {
+  position: absolute;
+  inset: -3%;
+  width: 106%;
+  height: 106%;
+}
+
+.stage .layer {
+  transition: transform 0.25s ease-out;
+}
+
+/* 小人用定格動畫的節奏抖動：一格一格，不是滑順的 */
+.figures {
+  animation: stop-motion 1.6s steps(1) infinite;
+  transform-origin: 650px 430px;
+}
+
+@keyframes stop-motion {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-6px) rotate(-1.5deg); }
+  50% { transform: translateY(-2px) rotate(1deg); }
+  75% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px 48px;
+  align-items: start;
+  margin: 40px 0 72px;
+}
+
+.intro .tagline {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+/* ---------- 區塊 ---------- */
+
+section {
+  margin-bottom: 72px;
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 24px;
+  margin-bottom: 26px;
+}
+
+.page-head {
+  margin-bottom: 36px;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--sheet);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.feature img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-body {
+  padding: 36px;
+}
+
+/* ---------- 作品卡片 ---------- */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.filter {
+  padding: 4px 18px;
+  border: 1px solid var(--line);
+  border-radius: 50px;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.filter:hover {
+  border-color: var(--ink);
+}
+
+.filter[aria-pressed="true"] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* 瀑布流：直幅作品不會被裁切 */
+.work-grid {
+  columns: 3 280px;
+  column-gap: 22px;
+}
+
+.work-card {
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 22px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--sheet);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 6px 18px var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-5px) rotate(-0.4deg);
+  box-shadow: 0 16px 30px var(--shadow);
+}
+
+.work-card img {
+  width: 100%;
+}
+
+.work-card-body {
+  padding: 14px 20px 16px;
+}
+
+.work-card-body p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- 單件作品頁 ---------- */
+
+.work-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.work-detail > img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.work-info {
+  position: sticky;
+  top: 28px;
+}
+
+.work-meta {
+  margin: 18px 0;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 48px;
+}
+
+/* ---------- 《藍夜》頁 ---------- */
+
+.film {
+  width: 100%;
+  border-radius: var(--radius);
+  background: #000;
+  box-shadow: 0 16px 36px var(--shadow);
+}
+
+.chapters {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.chapter {
+  display: block;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--sheet);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.88rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.chapter img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.chapter span {
+  display: block;
+  padding: 4px 10px 6px;
+}
+
+.chapter small {
+  color: var(--muted);
+  margin-right: 6px;
+}
+
+.chapter:hover,
+.chapter.is-current {
+  border-color: var(--accent);
+}
+
+.scrubber {
+  padding: 22px;
+  border-radius: var(--radius);
+  background: var(--sheet);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+.scrubber img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  background: var(--sheet-2);
+}
+
+.scrubber input[type="range"] {
+  width: 100%;
+  margin: 16px 0 8px;
+  accent-color: var(--ink);
+}
+
+.scrubber-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.frame-count {
+  margin-left: auto;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.08em;
+}
+
+.set-photo {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.set-photo img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 28px var(--shadow);
+}
+
+/* ---------- 關於 ---------- */
+
+.materials {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.material {
+  display: block;
+  overflow: hidden;
+  border-radius: 18px;
+  background: var(--sheet);
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 6px 18px var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.material:hover {
+  transform: translateY(-4px);
+}
+
+.material img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.material h3 {
+  padding: 10px 14px 0;
+}
+
+.material p {
+  margin: 0;
+  padding: 0 14px 12px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+/* ---------- 404 ---------- */
+
+.not-found {
+  padding: 8vh 0;
+  text-align: center;
+}
+
+/* ---------- 頁尾 ---------- */
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 48px;
+  padding: 24px 0 36px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ---------- 手機與平板 ---------- */
+
+@media (max-width: 800px) {
+  .stage {
+    height: 270px;
+  }
+
+  .intro,
+  .feature,
+  .work-detail,
+  .set-photo {
+    grid-template-columns: 1fr;
+  }
+
+  .work-info {
+    position: static;
+  }
+
+  .feature-body {
+    padding: 24px;
+  }
+
+  .chapters {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .chapter {
+    flex: 0 0 46%;
+    scroll-snap-align: start;
+  }
+
+  .materials {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .scrubber {
+    padding: 14px;
+  }
+}
+
+/* 使用者設定減少動態時，就讓小人休息 */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .figures {
+    animation: none;
+  }
+
+  .stage .layer,
+  .work-card,
+  .material,
+  .button {
+    transition: none;
+  }
+}

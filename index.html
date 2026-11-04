@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>香香軟軟屍體｜曾怡柔作品集</title>
+    <meta name="description" content="曾怡柔的作品集，收錄定格動畫《藍夜》、紙雕、裝置與繪畫。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="香香軟軟屍體｜曾怡柔作品集" />
+    <meta property="og:description" content="定格動畫《藍夜》、紙雕、裝置與繪畫。" />
+    <meta property="og:url" content="https://marial1e.github.io/portfolio/" />
+    <meta property="og:image" content="https://marial1e.github.io/portfolio/images/still-clouds.webp" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cactus+Classical+Serif&family=Chiron+Sung+HK:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script>try { if (localStorage.getItem("theme") === "night") document.documentElement.dataset.theme = "night"; } catch (e) {}</script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a class="logo" href="index.html">PORTFOLIO｜作品集</a>
+        <nav class="site-nav" aria-label="主要導覽">
+          <a href="works.html">作品</a>
+          <a href="blue-night.html">藍夜</a>
+          <a href="about.html">關於</a>
+          <button class="theme-toggle" type="button" data-theme-toggle>關燈</button>
+        </nav>
+      </header>
+
+      <main>
+        <!-- 主視覺：一層一層的紙雕雲，滑鼠移動時會錯開 -->
+        <div class="stage" aria-hidden="true">
+          <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <filter id="paper-shadow" x="-10%" y="-10%" width="120%" height="130%">
+                <feDropShadow dx="8" dy="14" stdDeviation="7" flood-color="#14162a" flood-opacity="0.42" />
+              </filter>
+            </defs>
+
+            <g class="layer" data-depth="6" fill="var(--shade)" filter="url(#paper-shadow)">
+              <circle cx="760" cy="90" r="110" />
+              <circle cx="880" cy="60" r="100" />
+              <circle cx="640" cy="60" r="90" />
+              <circle cx="1000" cy="120" r="120" />
+              <circle cx="1100" cy="260" r="130" />
+              <circle cx="1180" cy="380" r="120" />
+              <circle cx="980" cy="310" r="105" />
+              <circle cx="300" cy="260" r="120" />
+              <circle cx="420" cy="200" r="110" />
+              <circle cx="190" cy="330" r="110" />
+            </g>
+
+            <g class="layer" data-depth="12" fill="var(--sheet-2)" filter="url(#paper-shadow)">
+              <circle cx="1040" cy="30" r="120" />
+              <circle cx="1150" cy="100" r="130" />
+              <circle cx="1215" cy="235" r="120" />
+              <circle cx="1100" cy="205" r="85" />
+              <circle cx="1000" cy="520" r="110" />
+              <circle cx="1120" cy="470" r="120" />
+              <circle cx="1215" cy="520" r="120" />
+              <circle cx="60" cy="400" r="120" />
+              <circle cx="20" cy="300" r="90" />
+            </g>
+
+            <!-- 《藍夜》的小人 -->
+            <g class="layer" data-depth="18">
+              <g class="figures">
+                <path d="M556 470 C548 372 582 316 610 288 C636 320 650 382 640 470 Z" fill="var(--figure)" />
+                <path d="M644 470 C640 382 664 322 688 300 C716 330 730 390 718 470 Z" fill="var(--figure)" />
+                <circle cx="610" cy="264" r="29" fill="var(--accent)" />
+                <circle cx="692" cy="276" r="29" fill="var(--accent)" />
+              </g>
+            </g>
+
+            <g class="layer" data-depth="28" fill="var(--sheet)" filter="url(#paper-shadow)">
+              <rect x="-60" y="480" width="1060" height="180" />
+              <circle cx="100" cy="540" r="150" />
+              <circle cx="250" cy="500" r="120" />
+              <circle cx="400" cy="480" r="110" />
+              <circle cx="540" cy="470" r="100" />
+              <circle cx="660" cy="450" r="85" />
+              <circle cx="780" cy="470" r="100" />
+              <circle cx="900" cy="520" r="110" />
+              <circle cx="1040" cy="590" r="110" />
+            </g>
+
+            <g class="layer" data-depth="44" fill="var(--sheet)" filter="url(#paper-shadow)">
+              <rect x="-60" y="-60" width="640" height="170" />
+              <circle cx="40" cy="120" r="130" />
+              <circle cx="190" cy="90" r="130" />
+              <circle cx="340" cy="90" r="120" />
+              <circle cx="470" cy="60" r="100" />
+              <circle cx="570" cy="25" r="90" />
+              <circle cx="110" cy="225" r="85" />
+              <circle cx="270" cy="175" r="78" />
+              <circle cx="415" cy="135" r="66" />
+            </g>
+          </svg>
+        </div>
+
+        <div class="intro">
+          <div>
+            <span class="en-sub">STATEMENT</span>
+            <h1>曾怡柔</h1>
+            <p class="tagline">會死嗎 不知道</p>
+          </div>
+          <div>
+            <p>
+              我是曾怡柔，目前就讀實踐大學媒體傳達設計學系。<br />
+              這是我的作品集網站。
+            </p>
+            <a class="button" href="works.html">我的作品 ➔</a>
+          </div>
+        </div>
+
+        <section aria-labelledby="film-heading">
+          <div class="feature">
+            <img src="images/still-folds.webp" width="960" height="540" alt="《藍夜》畫面：藍色紙偶在白色摺紙線條之間" />
+            <div class="feature-body">
+              <span class="en-sub">VIDEO</span>
+              <h2 id="film-heading">《藍夜》</h2>
+              <p class="lede">定格動畫。好累喔 但很好玩。</p>
+              <a class="button" href="blue-night.html">看影片 ➔</a>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="works-heading">
+          <div class="section-head">
+            <div>
+              <span class="en-sub">WORKS</span>
+              <h2 id="works-heading">還有這些</h2>
+            </div>
+            <a class="button quiet" href="works.html">全部作品 ➔</a>
+          </div>
+          <div class="work-grid" id="featured-grid"></div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 曾怡柔</p>
+        <button class="button quiet" type="button" data-to-top>回到頂部 ↑</button>
+      </footer>
+    </div>
+
+    <script src="works-data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

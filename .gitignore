@@ -1,0 +1,10 @@
+# 原始檔只留在本機，不上傳（movie.mp4 超過 GitHub 100 MB 上限）
+_originals/
+
+# 本機預覽設定
+.claude/
+
+# 系統檔
+desktop.ini
+Thumbs.db
+.DS_Store
