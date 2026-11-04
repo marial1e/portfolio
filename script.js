@@ -194,7 +194,7 @@
       var filmLink = document.createElement("a");
       filmLink.className = "button quiet";
       filmLink.href = "blue-night.html";
-      filmLink.textContent = "看《藍夜》 ➔";
+      filmLink.textContent = "看動畫 ➔";
       info.append(filmLink);
     }
 
