@@ -25,7 +25,7 @@ const WORKS = [
     id: "blue-night",
     title: "《藍夜》",
     type: "動畫",
-    medium: "定格動畫・紙",
+    medium: "定格動畫・紙雕・光影",
     image: "images/still-folds.webp",
     w: 960,
     h: 540,
@@ -33,19 +33,6 @@ const WORKS = [
     text: ["用紙搭出來的定格動畫。"],
     note: "好累喔 但很好玩",
     link: "blue-night.html",
-  },
-  {
-    id: "clouds",
-    title: "《藍夜》",
-    type: "紙",
-    medium: "紙雕・光影",
-    image: "images/clouds.webp",
-    w: 1800,
-    h: 1012,
-    alt: "層層白紙剪成的雲，中間露出兩個黃頭藍身的小人",
-    text: [
-      "使用白紙剪成一層一層堆疊，靠打光和影子把深度撐出來。",
-    ],
   },
   {
     id: "arcade",

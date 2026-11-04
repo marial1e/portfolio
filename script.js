@@ -190,14 +190,6 @@
       info.append(note);
     }
 
-    if (work.id === "clouds") {
-      var filmLink = document.createElement("a");
-      filmLink.className = "button quiet";
-      filmLink.href = "blue-night.html";
-      filmLink.textContent = "看動畫 ➔";
-      info.append(filmLink);
-    }
-
     target.append(img, info);
 
     /* 上一件／下一件，頭尾相接 */
