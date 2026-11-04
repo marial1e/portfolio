@@ -43,7 +43,7 @@ const WORKS = [
     w: 820,
     h: 1728,
     alt: "粉紅、綠、藍色彩繪的機台側板，上面有一張黃色圓臉",
-    text: ["使用RPG maker製作，並架設車出一個遊戲機台。"],
+    text: ["使用RPG maker製作，並使用木板及顏料架設出一個遊戲機台。"],
     featured: true,
   },
   {
